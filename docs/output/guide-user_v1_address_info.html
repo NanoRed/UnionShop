@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        
+<link href="./assets/fa32c06d/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/89e6f4e2/solarized_light.css" rel="stylesheet">
+<link href="./assets/324b5bb/style.css" rel="stylesheet">
+<script src="./assets/a150d03b/jquery.js"></script>
+<script src="./assets/fa32c06d/js/bootstrap.js"></script>
+<script src="./assets/99923a11/jssearch.js"></script>    <title>用户地址 - 信息 user/v1/address/info [WebApi] - 用户模块 - UnionSystem API Document</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w187" class="navbar-inverse navbar-fixed-top navbar"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w187-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./guide-index.html">UnionSystem API Document</a></div><div id="w187-collapse" class="collapse navbar-collapse"><ul id="w188" class="navbar-nav nav"><li><a href="./guide-README.html">Guide</a></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-2">
+                <div id="navigation" class="list-group"><a class="list-group-item" href="#navigation-180" data-toggle="collapse" data-parent="#navigation">登陆模块 <b class="caret"></b></a><div id="navigation-180" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-login_v1_call_login.html">调起登陆 login/v1/call/login [WebApi]</a>
+<a class="list-group-item" href="./guide-login_v1_callback_login.html">登陆完成回调 login/v1/callback/login [CallbackApi]</a></div>
+<a class="list-group-item" href="#navigation-181" data-toggle="collapse" data-parent="#navigation">订单模块 <b class="caret"></b></a><div id="navigation-181" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-order_v1_generate.html">下单请求 order/v1/generate [WebApi]</a>
+<a class="list-group-item" href="./guide-order_v1_generate_repayment.html">重新支付 order/v1/generate/re-payment [WebApi]</a>
+<a class="list-group-item" href="./guide-order_v1_cancel.html">取消订单 order/v1/cancel [WebApi]</a>
+<a class="list-group-item" href="./guide-order_v1_retrieve.html">订单列表 order/v1/retrieve [WebApi]</a></div>
+<a class="list-group-item" href="#navigation-182" data-toggle="collapse" data-parent="#navigation">支付模块 <b class="caret"></b></a><div id="navigation-182" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-pay_v1_callback_payment.html">接收支付回调 pay/v1/callback/payment [CallbackApi]</a></div>
+<a class="list-group-item active" href="#navigation-183" data-toggle="collapse" data-parent="#navigation">用户模块 <b class="caret"></b></a><div id="navigation-183" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./guide-user_v1_address_list.html">用户地址 - 列表 user/v1/address/list [WebApi]</a>
+<a class="list-group-item" href="./guide-user_v1_address_add.html">用户地址 - 新增 user/v1/address/add [WebApi]</a>
+<a class="list-group-item active" href="./guide-user_v1_address_info.html">用户地址 - 信息 user/v1/address/info [WebApi]</a>
+<a class="list-group-item" href="./guide-user_v1_address_edit.html">用户地址 - 更新 user/v1/address/edit [WebApi]</a>
+<a class="list-group-item" href="./guide-user_v1_address_del.html">用户地址 - 删除 user/v1/address/del [WebApi]</a>
+<a class="list-group-item" href="./guide-user_v1_address_sel.html">地区选择列表 user/v1/address/sel [WebApi]</a></div>
+<a class="list-group-item" href="#navigation-184" data-toggle="collapse" data-parent="#navigation">物流模块 <b class="caret"></b></a><div id="navigation-184" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-logis_v1_track_info.html">查询物流跟踪信息 logis/v1/track/info [WebApi]</a>
+<a class="list-group-item" href="./guide-logis_v1_callback_track.html">物流跟踪订阅回调 logis/v1/callback/track [CallbackApi]</a></div>
+<a class="list-group-item" href="#navigation-185" data-toggle="collapse" data-parent="#navigation">商品模块 <b class="caret"></b></a><div id="navigation-185" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-item_v1_comment_list.html">商品评价 - 列表 item/v1/comment/list [WebApi]</a>
+<a class="list-group-item" href="./guide-item_v1_comment_add.html">商品评价 - 新增 item/v1/comment/add [WebApi]</a></div>
+<a class="list-group-item" href="#navigation-186" data-toggle="collapse" data-parent="#navigation">其他 <b class="caret"></b></a><div id="navigation-186" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-others_crontab.html">执行定时任务 [crontab]</a>
+<a class="list-group-item" href="./guide-others_queue.html">执行队列消耗 [queue]</a>
+<a class="list-group-item" href="./guide-others_document.html">文档相关 [document]</a>
+<a class="list-group-item" href="./guide-others_git.html">Git相关 [git]</a></div></div>    </div>
+    <div class="col-md-9 guide-content" role="main">
+        <h2>用户地址 - 信息 <span id="yong-hu-de-zhi-xin-xi"></span><a href="#yong-hu-de-zhi-xin-xi" class="hashlink">&para;</a></h2><p><br></p>
+<h4>接口功能 <span id="jie-kou-gong-neng"></span><a href="#jie-kou-gong-neng" class="hashlink">&para;</a></h4><blockquote><p>获取用户地址信息</p>
+</blockquote>
+<h4>URL <span id="url"></span><a href="#url" class="hashlink">&para;</a></h4><blockquote><p><a href="https://api.sample.com/user/v1/address/info">https://api.sample.com/user/v1/address/info</a></p>
+</blockquote>
+<h4>请求方式 <span id="qing-qiu-fang-shi"></span><a href="#qing-qiu-fang-shi" class="hashlink">&para;</a></h4><blockquote><p>POST</p>
+</blockquote>
+<h4>请求header参数 <span id="qing-qiuheader-can-shu"></span><a href="#qing-qiuheader-can-shu" class="hashlink">&para;</a></h4><blockquote><table class="table table-bordered table-striped">
+<thead>
+<tr><th align="left">参数</th><th align="left">必选</th><th align="left">类型</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td align="left">Accept</td><td align="left">true</td><td align="left">string</td><td>application/json或application/xml，将返回json或xml格式</td></tr>
+<tr><td align="left">X-Api-Key</td><td align="left">true</td><td align="left">string</td><td>登陆完成后获取的接口key或token，将在渠道完成登陆跳转时传给web端，每个key有效期为6小时</td></tr>
+<tr><td align="left">X-Unionsystem-Channel</td><td align="left">true</td><td align="left">string</td><td>渠道代号</td></tr>
+<tr><td align="left">X-Unionsystem-Referer</td><td align="left">false</td><td align="left">string</td><td>请求时的当前页地址</td></tr>
+<tr><td align="left">X-Unionsystem-Os</td><td align="left">false</td><td align="left">string</td><td>客户端操作系统，ios或android</td></tr>
+</tbody>
+</table>
+</blockquote>
+<h4>请求body参数 <span id="qing-qiubody-can-shu"></span><a href="#qing-qiubody-can-shu" class="hashlink">&para;</a></h4><blockquote><table class="table table-bordered table-striped">
+<thead>
+<tr><th align="left">参数</th><th align="left">必选</th><th align="left">类型</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td align="left">id</td><td align="left">true</td><td align="left">int</td><td>地址ID</td></tr>
+</tbody>
+</table>
+</blockquote>
+<h4>响应header参数 <span id="xiang-yingheader-can-shu"></span><a href="#xiang-yingheader-can-shu" class="hashlink">&para;</a></h4><blockquote><table class="table table-bordered table-striped">
+<thead>
+<tr><th align="left">参数</th><th align="left">类型</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td align="left">X-Unionsystem-Script</td><td align="left">string</td><td>待执行脚本</td></tr>
+</tbody>
+</table>
+</blockquote>
+<h4>响应body参数 <span id="xiang-yingbody-can-shu"></span><a href="#xiang-yingbody-can-shu" class="hashlink">&para;</a></h4><pre><code class="hljs json">{
+    <span class="hljs-attr">"id"</span>:<span class="hljs-string">"15"</span>,
+    <span class="hljs-attr">"consignee"</span>:<span class="hljs-string">"张三"</span>,
+    <span class="hljs-attr">"phoneNo"</span>:<span class="hljs-string">"12345678910"</span>,
+    <span class="hljs-attr">"zipCode"</span>:<span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"districtTable"</span>:<span class="hljs-string">"cn2017"</span>,
+    <span class="hljs-attr">"districtInfo"</span>:[
+        {
+            <span class="hljs-attr">"id"</span>:<span class="hljs-string">"130000000000"</span>,
+            <span class="hljs-attr">"name"</span>:<span class="hljs-string">"河北省"</span>,
+            <span class="hljs-attr">"type"</span>:<span class="hljs-string">"1"</span>
+        },
+        {
+            <span class="hljs-attr">"id"</span>:<span class="hljs-string">"130100000000"</span>,
+            <span class="hljs-attr">"name"</span>:<span class="hljs-string">"石家庄市"</span>,
+            <span class="hljs-attr">"type"</span>:<span class="hljs-string">"2"</span>
+        },
+        {
+            <span class="hljs-attr">"id"</span>:<span class="hljs-string">"130184000000"</span>,
+            <span class="hljs-attr">"name"</span>:<span class="hljs-string">"新乐市"</span>,
+            <span class="hljs-attr">"type"</span>:<span class="hljs-string">"3"</span>
+        }
+    ],
+    <span class="hljs-attr">"addressDetail"</span>:<span class="hljs-string">"XX花园XX号"</span>
+}
+</code></pre>
+<blockquote><table class="table table-bordered table-striped">
+<thead>
+<tr><th align="left">参数</th><th align="left">类型</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td align="left">id</td><td align="left">int</td><td>地址ID</td></tr>
+<tr><td align="left">consignee</td><td align="left">string</td><td>收货人姓名</td></tr>
+<tr><td align="left">phoneNo</td><td align="left">string</td><td>收货人手机号</td></tr>
+<tr><td align="left">zipCode</td><td align="left">string</td><td>邮编，非必须参数</td></tr>
+<tr><td align="left">districtTable</td><td align="left">string</td><td>地区表版本</td></tr>
+<tr><td align="left">districtInfo</td><td align="left">array</td><td>地址地区信息</td></tr>
+<tr><td align="left">addressDetail</td><td align="left">string</td><td>详细地址</td></tr>
+</tbody>
+</table>
+</blockquote>
+<blockquote><table class="table table-bordered table-striped">
+<thead>
+<tr><th align="left">参数</th><th align="left">类型</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td align="left">id</td><td align="left">int</td><td>地区ID</td></tr>
+<tr><td align="left">name</td><td align="left">string</td><td>地区名称</td></tr>
+<tr><td align="left">type</td><td align="left">int</td><td>地区类型，1省，2市，3镇县区</td></tr>
+</tbody>
+</table>
+</blockquote>
+<h4>接口示例 <span id="jie-kou-shi-li"></span><a href="#jie-kou-shi-li" class="hashlink">&para;</a></h4><pre><code class="language- javascript">&lt;script type="text/javascript"&gt;
+    $.ajax({
+        url: "https://api.sample.com/user/v1/address/info",
+        headers: {
+            "Accept": "application/json",
+            "X-Api-Key": "c3f73e5df26e1740ae71e64cfa779d27",
+            "X-Unionsystem-Channel": "channel1",
+            "X-Unionsystem-Referer": "https://app.sample.com/module/comtroller/action",
+            "X-Unionsystem-Os": "ios",
+        },
+        type: "POST",
+        dataType: "JSON",
+        success: function (data) {
+            console.log(data);
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            if (errorThrown) {
+                alert(decodeURI(errorThrown));
+            } else {
+                alert("未知错误");
+            }
+        },
+        complete: function(XMLHttpRequest){
+            var script = XMLHttpRequest.getResponseHeader('X-Unionsystem-Script');
+            if (script) {
+                script = $(script).html();
+                if (window.execScript) {
+                    window.execScript(script);
+                } else {
+                    window.eval(script);
+                }
+            }
+        }
+    });
+&lt;/script&gt;
+</code></pre>
+        <div class="toplink"><a href="#" class="h1" title="go to top"><span class="glyphicon glyphicon-arrow-up"></a></div>
+    </div>
+</div>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Fri, 27 Dec 2019 05:16:05 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script>jQuery(function ($) {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

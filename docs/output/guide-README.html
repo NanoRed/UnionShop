@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        
+<link href="./assets/fa32c06d/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/89e6f4e2/solarized_light.css" rel="stylesheet">
+<link href="./assets/324b5bb/style.css" rel="stylesheet">
+<script src="./assets/a150d03b/jquery.js"></script>
+<script src="./assets/fa32c06d/js/bootstrap.js"></script>
+<script src="./assets/99923a11/jssearch.js"></script>    <title>UnionSystem API Document</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w151" class="navbar-inverse navbar-fixed-top navbar"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w151-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./guide-index.html">UnionSystem API Document</a></div><div id="w151-collapse" class="collapse navbar-collapse"><ul id="w152" class="navbar-nav nav"><li><a href="./guide-README.html">Guide</a></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-2">
+                <div id="navigation" class="list-group"><a class="list-group-item" href="#navigation-144" data-toggle="collapse" data-parent="#navigation">登陆模块 <b class="caret"></b></a><div id="navigation-144" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-login_v1_call_login.html">调起登陆 login/v1/call/login [WebApi]</a>
+<a class="list-group-item" href="./guide-login_v1_callback_login.html">登陆完成回调 login/v1/callback/login [CallbackApi]</a></div>
+<a class="list-group-item" href="#navigation-145" data-toggle="collapse" data-parent="#navigation">订单模块 <b class="caret"></b></a><div id="navigation-145" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-order_v1_generate.html">下单请求 order/v1/generate [WebApi]</a>
+<a class="list-group-item" href="./guide-order_v1_generate_repayment.html">重新支付 order/v1/generate/re-payment [WebApi]</a>
+<a class="list-group-item" href="./guide-order_v1_cancel.html">取消订单 order/v1/cancel [WebApi]</a>
+<a class="list-group-item" href="./guide-order_v1_retrieve.html">订单列表 order/v1/retrieve [WebApi]</a></div>
+<a class="list-group-item" href="#navigation-146" data-toggle="collapse" data-parent="#navigation">支付模块 <b class="caret"></b></a><div id="navigation-146" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-pay_v1_callback_payment.html">接收支付回调 pay/v1/callback/payment [CallbackApi]</a></div>
+<a class="list-group-item" href="#navigation-147" data-toggle="collapse" data-parent="#navigation">用户模块 <b class="caret"></b></a><div id="navigation-147" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-user_v1_address_list.html">用户地址 - 列表 user/v1/address/list [WebApi]</a>
+<a class="list-group-item" href="./guide-user_v1_address_add.html">用户地址 - 新增 user/v1/address/add [WebApi]</a>
+<a class="list-group-item" href="./guide-user_v1_address_info.html">用户地址 - 信息 user/v1/address/info [WebApi]</a>
+<a class="list-group-item" href="./guide-user_v1_address_edit.html">用户地址 - 更新 user/v1/address/edit [WebApi]</a>
+<a class="list-group-item" href="./guide-user_v1_address_del.html">用户地址 - 删除 user/v1/address/del [WebApi]</a>
+<a class="list-group-item" href="./guide-user_v1_address_sel.html">地区选择列表 user/v1/address/sel [WebApi]</a></div>
+<a class="list-group-item" href="#navigation-148" data-toggle="collapse" data-parent="#navigation">物流模块 <b class="caret"></b></a><div id="navigation-148" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-logis_v1_track_info.html">查询物流跟踪信息 logis/v1/track/info [WebApi]</a>
+<a class="list-group-item" href="./guide-logis_v1_callback_track.html">物流跟踪订阅回调 logis/v1/callback/track [CallbackApi]</a></div>
+<a class="list-group-item" href="#navigation-149" data-toggle="collapse" data-parent="#navigation">商品模块 <b class="caret"></b></a><div id="navigation-149" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-item_v1_comment_list.html">商品评价 - 列表 item/v1/comment/list [WebApi]</a>
+<a class="list-group-item" href="./guide-item_v1_comment_add.html">商品评价 - 新增 item/v1/comment/add [WebApi]</a></div>
+<a class="list-group-item" href="#navigation-150" data-toggle="collapse" data-parent="#navigation">其他 <b class="caret"></b></a><div id="navigation-150" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-others_crontab.html">执行定时任务 [crontab]</a>
+<a class="list-group-item" href="./guide-others_queue.html">执行队列消耗 [queue]</a>
+<a class="list-group-item" href="./guide-others_document.html">文档相关 [document]</a>
+<a class="list-group-item" href="./guide-others_git.html">Git相关 [git]</a></div></div>    </div>
+    <div class="col-md-9 guide-content" role="main">
+        <h1>聚合订单系统 <span id="ju-he-ding-dan-xi-tong"></span><a href="#ju-he-ding-dan-xi-tong" class="hashlink">&para;</a></h1>
+<div class="toc"><ol><li><a href="#deng-lu-mo-kuai">登陆模块</a></li>
+<li><a href="#ding-dan-mo-kuai">订单模块</a></li>
+<li><a href="#zhi-fu-mo-kuai">支付模块</a></li>
+<li><a href="#yong-hu-mo-kuai">用户模块</a></li>
+<li><a href="#wu-liu-mo-kuai">物流模块</a></li>
+<li><a href="#shang-pin-mo-kuai">商品模块</a></li>
+<li><a href="#qi-ta">其他</a></li></ol></div>
+<h2>登陆模块 <span id="deng-lu-mo-kuai"></span><a href="#deng-lu-mo-kuai" class="hashlink">&para;</a></h2><ul>
+<li><a href="guide-login_v1_call_login.html">调起登陆 login/v1/call/login [WebApi]</a></li>
+<li><a href="guide-login_v1_callback_login.html">登陆完成回调 login/v1/callback/login [CallbackApi]</a></li>
+</ul>
+<h2>订单模块 <span id="ding-dan-mo-kuai"></span><a href="#ding-dan-mo-kuai" class="hashlink">&para;</a></h2><ul>
+<li><a href="guide-order_v1_generate.html">下单请求 order/v1/generate [WebApi]</a></li>
+<li><a href="guide-order_v1_generate_repayment.html">重新支付 order/v1/generate/re-payment [WebApi]</a></li>
+<li><a href="guide-order_v1_cancel.html">取消订单 order/v1/cancel [WebApi]</a></li>
+<li><a href="guide-order_v1_retrieve.html">订单列表 order/v1/retrieve [WebApi]</a></li>
+</ul>
+<h2>支付模块 <span id="zhi-fu-mo-kuai"></span><a href="#zhi-fu-mo-kuai" class="hashlink">&para;</a></h2><ul>
+<li><a href="guide-pay_v1_callback_payment.html">接收支付回调 pay/v1/callback/payment [CallbackApi]</a></li>
+</ul>
+<h2>用户模块 <span id="yong-hu-mo-kuai"></span><a href="#yong-hu-mo-kuai" class="hashlink">&para;</a></h2><ul>
+<li><a href="guide-user_v1_address_list.html">用户地址 - 列表 user/v1/address/list [WebApi]</a></li>
+<li><a href="guide-user_v1_address_add.html">用户地址 - 新增 user/v1/address/add [WebApi]</a></li>
+<li><a href="guide-user_v1_address_info.html">用户地址 - 信息 user/v1/address/info [WebApi]</a></li>
+<li><a href="guide-user_v1_address_edit.html">用户地址 - 更新 user/v1/address/edit [WebApi]</a></li>
+<li><a href="guide-user_v1_address_del.html">用户地址 - 删除 user/v1/address/del [WebApi]</a></li>
+<li><a href="guide-user_v1_address_sel.html">地区选择列表 user/v1/address/sel [WebApi]</a></li>
+</ul>
+<h2>物流模块 <span id="wu-liu-mo-kuai"></span><a href="#wu-liu-mo-kuai" class="hashlink">&para;</a></h2><ul>
+<li><a href="guide-logis_v1_track_info.html">查询物流跟踪信息 logis/v1/track/info [WebApi]</a></li>
+<li><a href="guide-logis_v1_callback_track.html">物流跟踪订阅回调 logis/v1/callback/track [CallbackApi]</a></li>
+</ul>
+<h2>商品模块 <span id="shang-pin-mo-kuai"></span><a href="#shang-pin-mo-kuai" class="hashlink">&para;</a></h2><ul>
+<li><a href="guide-item_v1_comment_list.html">商品评价 - 列表 item/v1/comment/list [WebApi]</a></li>
+<li><a href="guide-item_v1_comment_add.html">商品评价 - 新增 item/v1/comment/add [WebApi]</a></li>
+</ul>
+<h2>其他 <span id="qi-ta"></span><a href="#qi-ta" class="hashlink">&para;</a></h2><ul>
+<li><a href="guide-others_crontab.html">执行定时任务 [crontab]</a></li>
+<li><a href="guide-others_queue.html">执行队列消耗 [queue]</a></li>
+<li><a href="guide-others_document.html">文档相关 [document]</a></li>
+<li><a href="guide-others_git.html">Git相关 [git]</a></li>
+</ul>
+        <div class="toplink"><a href="#" class="h1" title="go to top"><span class="glyphicon glyphicon-arrow-up"></a></div>
+    </div>
+</div>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Fri, 27 Dec 2019 05:16:04 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script>jQuery(function ($) {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>
